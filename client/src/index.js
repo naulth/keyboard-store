@@ -4,11 +4,15 @@ import App from './App';
 import {BrowserRouter} from "react-router-dom"
 import {createRoot} from 'react-dom/client';
 
+import {UserProvider} from "./Context/user"
+
 const root = createRoot(document.getElementById('root'));
 
 root.render(
     <BrowserRouter>
-        <App />
+        <UserProvider>
+            <App />
+        </UserProvider>
     </BrowserRouter>
 );
 
